@@ -25,18 +25,15 @@ namespace Exercise1
             using HttpClient client = new();
             try
             {
-                // Download the JSON data asynchronously
-                string jsonData = await client.GetStringAsync(url, token);
-
-                // Log success message after downloading the data
-                // await info("Product data downloaded successfully.");
-
-                // Asynchronously deserialize the JSON data into an array of Product objects
+                // Asynchronously download and deserialize the JSON data into an array of Product objects
                 using var stream = await client.GetStreamAsync(url, token);
                 Product[]? products = await JsonSerializer.DeserializeAsync<Product[]>(
                     stream,
                     cancellationToken: token
                 );
+
+                // Log success message after downloading the data
+                await info("Product data downloaded successfully.");
 
                 if (products == null || products.Length == 0)
                 {
@@ -88,7 +85,9 @@ namespace Exercise1
                     relewiseProducts.Add(relewiseProduct);
 
                     // Log each mapped product
-                    // await info($"Mapped product ID: {relewiseProduct.Id}, Name: {relewiseProduct.DisplayName}, List Price: {relewiseProduct.ListPrice}, Sale Price: {relewiseProduct.SalesPrice}");
+                    await info(
+                        $"Mapped product ID: {relewiseProduct.Id}, Name: {relewiseProduct.DisplayName}, List Price: {relewiseProduct.ListPrice}, Sale Price: {relewiseProduct.SalesPrice}"
+                    );
                 }
 
                 // Return success message with product count

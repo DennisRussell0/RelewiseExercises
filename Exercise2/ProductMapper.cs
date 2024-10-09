@@ -30,7 +30,7 @@ namespace Exercise2
                 using var stream = await client.GetStreamAsync(url, token);
 
                 // Log success message after downloading the data
-                // await info("Product data downloaded successfully.");
+                await info("Product data downloaded successfully.");
 
                 // Parse the XML data using LINQ to XML
                 XDocument xmlDoc = await XDocument.LoadAsync(stream, LoadOptions.None, token);
@@ -103,7 +103,9 @@ namespace Exercise2
                     relewiseProducts.Add(relewiseProduct);
 
                     // Log each mapped product
-                    // await info($"Mapped product ID: {relewiseProduct.Id}, Title: {relewiseProduct.DisplayName}, Price: {relewiseProduct.ListPrice}, Sale Price: {relewiseProduct.SalesPrice}");
+                    await info(
+                        $"Mapped product ID: {relewiseProduct.Id}, Title: {relewiseProduct.DisplayName}, Price: {relewiseProduct.ListPrice}, Sale Price: {relewiseProduct.SalesPrice}"
+                    );
                 }
 
                 // Return success message with product count

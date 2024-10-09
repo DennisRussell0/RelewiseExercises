@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/NaHXFY5nDs=",
+  "dgSpecHash": "3//tkYYxMhs=",
   "success": true,
   "projectFilePath": "C:\\Users\\Dennis\\Development\\RelewiseExercises\\Exercise2\\Exercise2.csproj",
   "expectedPackageFiles": [
@@ -8,8 +8,7 @@
     "C:\\Users\\Dennis\\.nuget\\packages\\messagepack.annotations\\2.3.85\\messagepack.annotations.2.3.85.nupkg.sha512",
     "C:\\Users\\Dennis\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Dennis\\.nuget\\packages\\relewise.client\\1.170.0\\relewise.client.1.170.0.nupkg.sha512",
-    "C:\\Users\\Dennis\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
-    "C:\\Users\\Dennis\\.nuget\\packages\\system.text.json\\8.0.4\\system.text.json.8.0.4.nupkg.sha512"
+    "C:\\Users\\Dennis\\.nuget\\packages\\system.text.json\\8.0.5\\system.text.json.8.0.5.nupkg.sha512"
   ],
   "logs": []
 }

@@ -28,7 +28,7 @@ namespace Exercise3
                 string rawData = await client.GetStringAsync(url, token);
 
                 // Log success message after downloading the data
-                // await info("Product data downloaded successfully.");
+                await info("Product data downloaded successfully.");
 
                 // Split the raw data into rows based on newline characters
                 var rows = rawData.Split(separator, StringSplitOptions.None);
@@ -99,7 +99,9 @@ namespace Exercise3
                         relewiseProducts.Add(relewiseProduct);
 
                         // Log each mapped product's ID and name
-                        // await info($"Mapped Product ID: {productId}, Product Name: {productName}, Sales Price: {salesPriceRaw}, List Price: {listPriceRaw}");
+                        await info(
+                            $"Mapped Product ID: {productId}, Product Name: {productName}, Sales Price: {salesPriceRaw}, List Price: {listPriceRaw}"
+                        );
                     }
                     catch (FormatException fex)
                     {
